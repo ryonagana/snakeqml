@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>snake.js</file>
+        <file>Tail.qml</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file alias="bg.jpg">images/bg.jpg</file>
+        <file>images/sprites/tail.png</file>
+    </qresource>
+</RCC>
