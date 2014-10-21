@@ -10,7 +10,7 @@ Window {
     width: 470
     height: 320
 
-
+    property bool isGameRunning: false;
 
 
     Rectangle {
@@ -21,10 +21,13 @@ Window {
 
         Timer {
             id: heartbeat
-            interval: 500; running: false; repeat:true
-            onTriggered: Logic.snakeMove();
+            interval: 500; running: window.isGameRunning ; repeat:true
+            onTriggered: { Logic.updateSnake() }
+        }
 
-
+        Timer {
+            id: timer
+            interval: 250; running: true; repeat: true
         }
 
         Item {

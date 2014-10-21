@@ -1,11 +1,14 @@
 import QtQuick 2.3
 
 Rectangle {
-    width: 120
-    height: 120
+    width: 16
+    height: 16
 
     Image {
-       source: "data/sprites/tail.png"
+       width: parent.width
+       height: parent.width
+       source: "data/tail.png"
+       fillMode:  Image.PreserveAspectCrop
     }
 
 }
